@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  background-color: #ececec;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.user {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.user p {
+  cursor: pointer;
+}

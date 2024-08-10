@@ -1,9 +1,16 @@
-const app = document.querySelector("container");
+const app = document.querySelector(".container");
 const url = "https://jsonplaceholder.typicode.com/users";
 const getUrl = new URLSearchParams(window.location.search);
 id = getUrl.get("id");
-console.log(`${url}/${id}`);
+
 fetch(`${url}/${id}`)
   .then((res) => res.json())
-  .then((json) => console.log(json))
+  .then((json) => {
+    const name = document.createElement("p");
+    name.innerHTML = json.name;
+
+    app.appendChild(name);
+    app.appendChild(company);
+  })
+
   .catch((err) => console.log(err));
